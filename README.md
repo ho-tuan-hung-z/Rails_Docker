@@ -8,4 +8,4 @@
 
 * Deployment instructions: docker compose up --build
 
-![Image](https://drive.google.com/file/d/19hcNviIba3fIQXWihB0oUVRsFzhsI9_j/view?usp=sharing)https://drive.google.com/file/d/19hcNviIba3fIQXWihB0oUVRsFzhsI9_j/view?usp=sharing)
+![Image_here](https://drive.google.com/file/d/19hcNviIba3fIQXWihB0oUVRsFzhsI9_j/view?usp=sharing)
