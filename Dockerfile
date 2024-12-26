@@ -12,7 +12,8 @@ RUN mkdir $DIR
 WORKDIR $DIR
 
 # Add the Gemfile and Gemfile.lock to the container
-ADD Gemfile Gemfile.lock $DIR/
+# Sử dụng COPY thay vì ADD cho file Gemfile, Gemfile.lock
+COPY Gemfile Gemfile.lock $DIR/
 
 # Set environment variables for Bundler
 ENV BUNDLE_GEMFILE=$DIR/Gemfile \
@@ -23,7 +24,8 @@ ENV BUNDLE_GEMFILE=$DIR/Gemfile \
 RUN bundle install
 
 # Add the rest of the application code
-ADD . $DIR
+# Dùng COPY để thêm các tệp khác của ứng dụng vào container
+COPY . $DIR
 
 # Specify the default command to run on container start
-CMD ["./bin/rails", "server"]
+CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
