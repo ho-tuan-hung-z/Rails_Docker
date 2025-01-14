@@ -1,0 +1,13 @@
+<!-- app/views/orders/show.html.erb -->
+<h1>Order Details</h1>
+<p>User: <%= @order.user.name %></p>
+<p>Status: <%= @order.status %></p>
+<p>Total Price: <%= number_to_currency(@order.total_price) %></p>
+
+<h2>Order Items:</h2>
+<% @order_items.each do |item| %>
+  <p>
+    Product: <%= item.product.name %> - Quantity: <%= item.quantity %>
+    - Price: <%= number_to_currency(item.price) %>
+  </p>
+<% end %>

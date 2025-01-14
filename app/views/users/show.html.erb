@@ -1,0 +1,8 @@
+<!-- app/views/users/show.html.erb -->
+<h1><%= @user.name %></h1>
+<p>Email: <%= @user.email %></p>
+
+<h2>Orders:</h2>
+<% @orders.each do |order| %>
+  <p>Order ID: <%= link_to order.id, order_path(order) %></p>
+<% end %>

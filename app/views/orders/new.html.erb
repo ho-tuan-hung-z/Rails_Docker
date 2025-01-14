@@ -1,0 +1,16 @@
+<!-- app/views/orders/new.html.erb -->
+<h1>Create New Order</h1>
+
+<%= form_with(model: @order, local: true) do |form| %>
+  <p>
+    <%= form.label :user_id %>
+    <%= form.collection_select :user_id, @users, :id, :name %>
+  </p>
+
+  <p>
+    <%= form.label :status %>
+    <%= form.select :status, ["Pending", "In Progress", "Delivered", "Cancelled", "Refunded"] %>
+  </p>
+
+  <%= form.submit "Create Order", class: "btn btn-success" %>
+<% end %>

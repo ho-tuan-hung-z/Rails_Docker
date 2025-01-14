@@ -1,0 +1,10 @@
+<!-- app/views/orders/index.html.erb -->
+<h1>Orders</h1>
+<%= link_to 'Create New Order', new_order_path, class: "btn btn-primary" %>
+<% @orders.each do |order| %>
+  <p>
+    Order ID: <%= link_to order.id, order_path(order) %>
+    - Status: <%= order.status %>
+    - Total Price: <%= number_to_currency(order.total_price) %>
+  </p>
+<% end %>
