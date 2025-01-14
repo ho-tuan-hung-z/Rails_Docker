@@ -17,7 +17,8 @@ gem "puma", ">= 5.0"
 gem 'bootstrap', '~> 5.1.3'
 gem 'sassc-rails'
 gem 'jquery-rails'
-
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
