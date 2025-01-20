@@ -48,12 +48,11 @@ test:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
-# for a full overview on how database connection configuration can be specified.
+# for a full overview on how database connec ation configuration can be specified.
 #
 production:
   <<: *default
   database: myapp_production
   username: root
-  password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
-  host: /cloudsql/storied-imprint-445709-v8:asia-northeast1:order-db
-  socket: /cloudsql/storied-imprint-445709-v8:asia-northeast1:order-db  
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
