@@ -53,5 +53,7 @@ test:
 production:
   <<: *default
   database: myapp_production
-  username: myapp
-  password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
+  username: root
+  password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
+  host: /cloudsql/storied-imprint-445709-v8:asia-northeast1:order-db
+  socket: /cloudsql/storied-imprint-445709-v8:asia-northeast1:order-db  

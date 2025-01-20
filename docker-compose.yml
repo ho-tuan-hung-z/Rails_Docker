@@ -12,13 +12,13 @@ services:
       - db_data:/var/lib/mysql
 
   app:
-    image: app:lastest
+    image: app:latest
     build:
       context: .
       dockerfile: Dockerfile
     command: sh ./docker-entrypoint.dev.sh
     environment:
-      DB_HOST: db
+      DB_HOST: db   # Sử dụng dịch vụ db trong Docker Compose khi chạy local
       MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
